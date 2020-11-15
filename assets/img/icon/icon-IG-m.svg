@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3162" data-name="Rectangle 3162" width="35" height="35" transform="translate(168 408)" fill="#32c8a4" stroke="#fff" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.008" x2="0.5" y2="0.998" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e09b3d"/>
+      <stop offset="0.3" stop-color="#c74c4d"/>
+      <stop offset="0.6" stop-color="#c21975"/>
+      <stop offset="1" stop-color="#7024c4"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="-0.451" y2="1.462" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" y1="-1.396" y2="6.586" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="icon-ig" transform="translate(-168 -408)" clip-path="url(#clip-path)">
+    <g id="instagram" transform="translate(168 408)">
+      <path id="Path_254" data-name="Path 254" d="M24.573,0H10.427A10.438,10.438,0,0,0,0,10.427V24.573A10.438,10.438,0,0,0,10.427,35H24.573A10.438,10.438,0,0,0,35,24.573V10.427A10.439,10.439,0,0,0,24.573,0Zm6.906,24.573a6.906,6.906,0,0,1-6.906,6.906H10.427a6.906,6.906,0,0,1-6.906-6.906V10.427a6.906,6.906,0,0,1,6.906-6.906H24.573a6.906,6.906,0,0,1,6.906,6.906V24.573Z" stroke="#fff" stroke-width="1" fill="url(#linear-gradient)"/>
+      <path id="Path_255" data-name="Path 255" d="M18.707,9.655a9.052,9.052,0,1,0,9.052,9.052A9.062,9.062,0,0,0,18.707,9.655Zm0,14.583a5.531,5.531,0,1,1,5.531-5.531A5.531,5.531,0,0,1,18.707,24.238Z" transform="translate(-1.207 -1.207)" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)"/>
+      <circle id="Ellipse_231" data-name="Ellipse 231" cx="2.169" cy="2.169" r="2.169" transform="translate(24.401 6.347)" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-3)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,263 @@
+@charset "UTF-8";
+@import './utils/_utils.scss';
+
+// * ==========================================================================
+// * 動畫
+// * ==========================================================================
+
+.section.active h1 {
+  line-height: 1;
+  transition: none;
+
+  @include min-width(map-get($tablet, sm)) {
+    transition: 0.5s;
+    transition-delay: 0.3s;
+  }
+}
+.section.active h2 {
+  line-height: 1;
+  transition: none;
+
+  @include min-width(map-get($tablet, sm)) {
+    transition: 0.5s;
+    transition-delay: 0.8s;
+  }
+}
+.section.active .section-btn {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.section-btn {
+  transition: all 0.85s cubic-bezier(0.77, 0, 0.175, 1) 1.4s;
+  display: block;
+  cursor: pointer;
+  width: 175px;
+  height: 50px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+//首頁滑鼠 icon 動畫
+.icon-scroll {
+  display: none;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  z-index: 5;
+  box-shadow: inset 0 0 0 2px #fff;
+  border-radius: 25px;
+  transform: translateY(80px);
+  transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: 0s;
+  opacity: 0;
+
+  @include min-width(map-get($tablet, lg)) {
+    display: block;
+  }
+
+  &::before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #fff;
+    margin-left: -2px;
+    top: 8px;
+    left: 50%;
+    border-radius: 4px;
+    animation: scroll 1.5s infinite;
+    position: absolute;
+  }
+}
+
+.section.active .icon-scroll {
+  transform: translateY(0px);
+  transition-delay: 1.5s;
+  animation: scrollActive 1.5s 1.5s infinite forwards;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes scrollActive {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//淡入淡出動畫
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+//Slide Block Animate
+@keyframes slide-in-out {
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  51% {
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes fill-text-color {
+  to {
+    color: $color-white;
+  }
+}
+
+.slideBar {
+  position: relative;
+  color: transparent;
+
+  @include min-width(map-get($phone, lg)) {
+    &:hover span {
+      animation: fill-text-color 2s 0.2s forwards;
+    }
+
+    &:hover::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: $color-gray;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: slide-in-out 1s cubic-bezier(0.75, 0, 0, 1) forwards;
+    }
+  }
+}
+
+//////////////////////////////////
+// Blob Code
+//////////////////////////////////
+
+.controls {
+  border: 1px solid #000;
+  background: #fff;
+  display: none;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 4px 20px -1px rgba(18, 22, 33, 0.7);
+
+  @media (max-width: 1200px) {
+    margin-top: -4%;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  label {
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 16px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  [type='range'] {
+    width: 160px;
+
+    @media (max-width: 600px) {
+      width: 280px;
+    }
+  }
+  & > div {
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @media (max-width: 600px) {
+        margin: 0 0 24px 0;
+      }
+    }
+  }
+}
+
+.rangeSlider {
+  position: relative;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &.rangeSlider__horizontal {
+    height: 10px;
+    width: 160px;
+  }
+  .rangeSlider__fill {
+    border-radius: 7px;
+    background: #fff;
+    position: absolute;
+
+    &:before {
+      content: '';
+      left: -2px;
+      top: -2px;
+      bottom: -2px;
+      right: -2px;
+      border: 2px solid #3f4656;
+      border-radius: 6px;
+      position: absolute;
+    }
+  }
+
+  .rangeSlider__fill__horizontal {
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .rangeSlider__handle {
+    border: 2px solid #3f4656;
+    cursor: grab;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  .rangeSlider__handle__horizontal {
+    top: -7px;
+  }
+}
+//////////////////////////////////
+// Blob Code end
+//////////////////////////////////

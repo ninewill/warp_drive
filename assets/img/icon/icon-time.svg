@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_50" data-name="Rectangle 50" width="30" height="30" transform="translate(983 925)" fill="#14bb30" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="icon-time" transform="translate(-983 -925)" clip-path="url(#clip-path)">
+    <g id="clock_1_" data-name="clock (1)" transform="translate(983 925)">
+      <g id="Group_73" data-name="Group 73">
+        <path id="Path_222" data-name="Path 222" d="M15,30A15,15,0,1,1,30,15,15.016,15.016,0,0,1,15,30ZM15,1.714A13.286,13.286,0,1,0,28.285,15,13.3,13.3,0,0,0,15,1.714Z" fill="#14bb30"/>
+      </g>
+      <g id="Group_74" data-name="Group 74">
+        <path id="Path_223" data-name="Path 223" d="M19.6,20.457a.852.852,0,0,1-.607-.251l-4.6-4.6A.856.856,0,0,1,14.143,15V5.268a.857.857,0,0,1,1.714,0v9.377l4.348,4.348a.857.857,0,0,1-.606,1.463Z" fill="#14bb30"/>
+      </g>
+    </g>
+  </g>
+</svg>

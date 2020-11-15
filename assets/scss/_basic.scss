@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import './utils/_utils.scss';
+
+// * ==========================================================================
+// * 標籤的基本樣式
+// * ==========================================================================
+
+input,
+select,
+textarea,
+button {
+  font-family: $font-family;
+}
+
+body {
+  //scrollbar
+  // overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+    @include min-width(map-get($phone, lg)) {
+      display: block;
+      width: 0.5rem;
+    }
+
+    @include min-width(map-get($tablet, lg)) {
+      width: 0.5rem;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    // background-color: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-blue-Indigo;
+    border-radius: 10px;
+
+    &:active {
+      background-color: $color-blue;
+    }
+  }
+}
+
+/* Fixed header and footer.
+	* --------------------------------------- */
+#header,
+#footer {
+  position: fixed;
+  display: block;
+  width: 100%;
+  // border: 1px solid #000;
+  // background: rgba(51, 51, 51, 0.5);
+  z-index: 1000;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 1rem 0;
+
+  @include min-width(map-get($tablet, lg)) {
+    z-index: 1000;
+    padding: 2rem 1rem;
+  }
+}
+
+#header {
+  top: 0px;
+}
+
+#footer {
+  bottom: 0px;
+}
+
+.container {
+  position: relative;
+}
+
+.float-block {
+  position: fixed;
+  bottom: 85px;
+  right: 10px;
+  z-index: 500;
+
+  @include min-width(map-get($phone, md)) {
+    right: 15px;
+  }
+
+  @include min-width(map-get($tablet, md)) {
+    right: 40px;
+  }
+}
+
+.float-block__top-btn {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: $color-red-light;
+  border-radius: 100%;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+
+  @include min-width(map-get($tablet, md)) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  @include min-width(map-get($desktop, sm)) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.float-block__download {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: $color-red-light;
+  border-radius: 100%;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 60px;
+  transition: opacity 0.3s;
+  background-image: url('~assets/img/icon/icon-download.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+  @include min-width(map-get($tablet, md)) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include min-width(map-get($desktop, sm)) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

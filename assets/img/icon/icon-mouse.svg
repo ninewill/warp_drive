@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="60" height="60" transform="translate(1601.575 892.575)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="icon-mouse" transform="translate(-1601.575 -892.575)" clip-path="url(#clip-path)">
+    <g id="mouse_3_" data-name="mouse (3)" transform="translate(1614.264 893)">
+      <path id="Path_62" data-name="Path 62" d="M17.524,0A17.543,17.543,0,0,0,0,17.524V42.052a17.524,17.524,0,1,0,35.047,0V17.524A17.543,17.543,0,0,0,17.524,0ZM31.473,42.051a13.949,13.949,0,0,1-27.9,0V17.524a13.949,13.949,0,1,1,27.9,0Zm0,0" transform="translate(0 0)" fill="#fff"/>
+      <path id="Path_63" data-name="Path 63" d="M14.466,9.549a1.787,1.787,0,0,0-1.787,1.787v8.226a1.787,1.787,0,0,0,3.574,0V11.336A1.787,1.787,0,0,0,14.466,9.549Zm0,0" transform="translate(3.058 2.303)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

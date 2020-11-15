@@ -1,0 +1,320 @@
+
+//內頁遊程Header
+
+.header {
+  position: relative;
+  z-index: 1000;
+  padding: 1rem;
+  background-color: $color-white;
+  box-shadow: 0px 3px 10px rgba($color-black, 0.3);
+}
+
+.header__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 220px;
+  height: 50px;
+  display: block;
+  position: relative;
+
+  > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url("~assets/img/logo.svg") no-repeat center/contain;
+    @include hidetext;
+  }
+
+  @include min-width(1320px) {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+.header__menu {
+  display: none;
+
+  @include min-width(map-get($tablet, lg)) {
+    display: flex;
+  }
+
+  > ul {
+    display: flex;
+    align-items: center;
+
+    > li {
+      margin: 0 0.25rem;
+
+      @include min-width(map-get($desktop, sm)) {
+        margin: 0 0.25rem;
+      }
+
+      @include min-width(map-get($desktop, md)) {
+        margin: 0 1.5rem;
+      }
+
+      @include min-width(1320px) {
+        margin: 0 1.5rem;
+      }
+
+      @include min-width(map-get($desktop, lg)) {
+        margin: 0 2rem;
+      }
+
+      @include min-width(map-get($desktop, xl)) {
+        margin: 0 3rem;
+      }
+
+    }
+  }
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: -1rem;
+    display: block;
+
+    @include min-width(map-get($tablet, lg)) {
+      bottom: -1rem;
+    }
+
+    @include min-width(1320px) {
+      bottom: -1.5rem;
+    }
+  }
+
+  > span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-top: 1rem;
+    font-weight: 900;
+    font-size: map-get($font-size, 6);
+    color: $color-black;
+  }
+}
+.menu__link-icon01 {
+  &::before {
+    background: url("~assets/img/icon/icon-nav-1.svg") no-repeat center/contain;
+  }
+}
+
+.menu__link-icon02 {
+  &::before {
+    background: url("~assets/img/icon/icon-nav-2.svg") no-repeat center/contain;
+  }
+}
+
+.menu__link-icon03 {
+  &::before {
+    background: url("~assets/img/icon/icon-nav-3.svg") no-repeat center/contain;
+  }
+}
+
+.menu__link-icon04 {
+  &::before {
+    background: url("~assets/img/icon/icon-nav-4.svg") no-repeat center/contain;
+  }
+}
+
+.menu__link-icon05 {
+  &::before {
+    background: url("~assets/img/icon/icon-nav-5.svg") no-repeat center/contain;
+  }
+}
+
+
+.current01{
+  &::after {
+    background-color: $color-orange-dark-light;
+  }
+}
+
+.current02{
+  &::after {
+    background-color: $color-blue-Indigo;
+  }
+}
+
+.current03{
+  &::after {
+    background-color: $color-red-dark-light;
+  }
+}
+
+.current04{
+  &::after {
+    background-color: $color-blue-dark-light;
+  }
+}
+
+.current05{
+  &::after {
+    background-color: $color-green-dark-light;
+  }
+}
+
+
+.language-btn {
+  display: block;
+  position: relative;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid $color-gray-light-d;
+  border-radius: 1.4375rem;
+  font-family: "Roboto", sans-serif;
+
+  @include min-width(map-get($desktop, md)) {
+    margin-right: 1rem;
+    padding: 0.25rem 1rem;
+  }
+
+  > span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: $color-black;
+    line-height: 2;
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      margin: 0 0.5rem;
+      display: block;
+      border-style: solid;
+      border-width: 8px 6px 0 6px;
+      border-color: $color-black transparent transparent transparent;
+    }
+  }
+
+  > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 0.5rem;
+    background-color: $color-gray-dark-d-d;
+
+    > li {
+      width: 100%;
+      flex: 1;
+      line-height: 2;
+      transition: 0.2s;
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid  rgba(255, 255, 255, 0.5);
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      > a {
+        display: block;
+      }
+    }
+  }
+}
+
+.tourist-language-btn{
+  display: none;
+  justify-content: center;
+
+  @include min-width(map-get($tablet, lg)) {
+    display: flex;
+  }
+
+  >ul{
+    margin-top: 3rem;
+  }
+}
+
+.mobile-menu-btn {
+  position: relative;
+  z-index: 3000;
+}
+
+.m-line {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 2px;
+  margin: -0.5rem auto 0 auto;
+  background-color: $color-white;
+  transition: all 0.2s ease;
+
+  &:before,
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: $color-white;
+    transition: all 0.2s ease;
+    top: 8px;
+  }
+
+  &:after {
+    width: 30px;
+    top: 16px;
+  }
+
+  @include min-width(map-get($phone, md)) {
+    width: 30px;
+
+    &:before {
+      width: 30px;
+    }
+
+    &:after {
+      width: 30px;
+    }
+  }
+}
+
+// Menu close
+
+.is-active {
+  .m-line {
+    width: 30px;
+    transform: rotate(45deg);
+    top: 8px;
+
+    &::before {
+      transform: scale(0);
+    }
+
+    &::after {
+      transform: rotate(-90deg);
+      top: 0px;
+    }
+
+    @include min-width(map-get($phone, md)) {
+      width: 30px;
+    }
+  }
+}
